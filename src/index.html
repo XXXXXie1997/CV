@@ -4,338 +4,233 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width-device-width, initial-scale=1.0" />
     <title>我的简历</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        background: #eee;
-        margin: 20px 0;
-      }
-
-      article {
-        width: 21cm;
-        min-height: 29.7cm;
-        background: white;
-        margin: 0 auto;
-        overflow: auto;
-        padding: 1em;
-      }
-    </style>
     <style media="print">
       body {
         margin: 0;
       }
-
-      .page2 {
-        page-break-before: always;
-        margin-top: 30px;
-      }
     </style>
-    <style>
-      body {
-      }
-
-      p {
-        margin: 0.3em 0;
-      }
-
-      h1 {
-        font-size: 25px;
-        margin-top: 0;
-      }
-
-      h4,
-      h5,
-      h6 {
-        font-weight: normal;
-      }
-
-      ol,
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      strong {
-        font-weight: normal;
-        color: #f60;
-      }
-
-      a {
-        color: #999;
-        text-decoration: none;
-        border-bottom: 1px solid;
-      }
-
-      p,
-      li {
-        color: #666;
-      }
-
-      strong {
-        font-weight: normal;
-      }
-
-      h3,
-      h4,
-      h5,
-      h6 {
-        margin: 0;
-      }
-
-      .bio {
-        position: relative;
-      }
-
-      .bio img {
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
-    </style>
-
-    <style>
-      .projects {
-      }
-
-      .projects p {
-        color: #666;
-      }
-
-      .projects strong {
-        color: #f60;
-      }
-
-      .projects > ol {
-        margin-top: 0;
-        list-style-position: inside;
-        padding: 0;
-      }
-
-      .projects > ol > li {
-        margin-bottom: 24px;
-      }
-
-      .projects > ol > li > header {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .projects > ol > li h3 {
-        display: inline-block;
-      }
-    </style>
-    <style>
-      .skills {
-      }
-
-      #skills {
-        width: 500px;
-        height: 270px;
-      }
-      @media print {
-        #skills {
-          display: none;
-        }
-      }
-
-      .skills > .wrapper {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .skills > .wrapper > :first-child {
-        margin-right: 24px;
-      }
-
-      .skills > .wrapper > #skills {
-      }
-
-      .skills > .wrapper > ul {
-        color: #666;
-      }
-
-      .skills > .wrapper strong {
-        color: #f60;
-      }
-
-      .skills > .wrapper > ul > li {
-        line-height: 1.2;
-        margin-bottom: 8px;
-      }
-    </style>
-    <style>
-      .openSource {
-      }
-
-      .openSource > h2 {
-      }
-
-      .openSource header img {
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
-
-      .openSource > ul {
-      }
-
-      .openSource > ul > li {
-        margin-bottom: 24px;
-      }
-
-      .openSource header {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .openSource h3 {
-      }
-    </style>
-
-    <style>
-      @media (max-width: 500px) {
-        body {
-          margin: 0;
-        }
-
-        article {
-          width: auto;
-          height: auto;
-        }
-
-        .bio img {
-          display: none;
-        }
-
-        .skills .wrapper {
-          flex-direction: column;
-        }
-
-        #skills {
-          width: auto;
-        }
-        .jobs header {
-          flex-direction: column;
-        }
-        .jobs header > h3,
-        .jobs header > h4,
-        .jobs header > span {
-          margin: 0;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
-    <article>
+    <article class="container">
       <section class="bio">
-        <h1>谢添宇</h1>
-        <img src="./images/photo.jpg" alt="" width="100" />
-        <p>男 | 27岁 | 内蒙古巴彦淖尔</p>
-        <p>手机：15164826005 | 微信：xty1416849251 | 邮箱：1416849251@qq.com</p>
+        <div class="left">
+          <div>谢添宇</div>
+          <p>男 | 1997 | 内蒙古巴彦淖尔</p>
+          <p>QQ：1416849251 | 邮箱：1416849251@qq.com</p>
+          <p>微信：xty1416849251 | 手机:15164826005</p>
+        </div>
+        <div class="right">
+          <img src="./images/photo.jpg" alt="" width="100" />
+        </div>
       </section>
-      <section class="projects">
-        <h1>企业级项目</h1>
-        <ol>
-          <li>
-            <header>
-              <h3>
-                smes机加工综合管理平台
-                <p style="font-size: 12px; font-weight: bold; color: #aaa">
-                  2021-02 ~ 2022-01
-                </p>
-              </h3>
-            </header>
-            <p>基于 <strong>Vue2</strong> 开发的机加工管理平台项目</p>
-            <p>
-              主要功能包括订单导入、创建、工艺制定、订单排产、监控生产进度、授权服务、数据可视化、消息分发、待办推送等，为制造企业降本增效
-            </p>
-            <p>
-              并基于 <strong>Vue2</strong>/<strong>Uniapp</strong>
-              开发了移动端， 移植PC端大多数功能并提供多种简易看板（基于
-              <strong>ECharts</strong>）
-            </p>
-          </li>
-
-          <li>
-            <header>
-              <h3>
-                才匠云平台
-                <p style="font-size: 12px; font-weight: bold; color: #aaa">
-                  2022-04 至今
-                </p>
-              </h3>
-            </header>
-            <p>
-              基于 <strong>Vue3</strong> /
-              <strong>TypeScript</strong>
-              开发的PaaS产品。包括设备管理、预防性维护、仓储管理、质量管理、IOT
-              等功能模块，并集成公司自研的基于元数据实现的低代码开发平台以及多种工具库。
-            </p>
-          </li>
-        </ol>
-      </section>
-
       <section class="skills">
-        <h2>主要技能</h2>
+        <h3>主要技能</h3>
         <div class="wrapper">
-          <div id="skills"></div>
           <ul>
-            <li>熟悉页面制作，能将UI设计稿<strong>完美还原</strong></li>
-            <li>掌握 <strong>Vue全家桶</strong>的使用</li>
             <li>
-              熟悉 <strong>ES6</strong>，了解 let / Promise / await / 析构赋值 /
-              模板字符串 / 拓展运算符等。
+              *
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >HTML \ CSS \ JavaScript</strong
+              >，以及<strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >ES6</strong
+              >、<strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >TypeScript</strong
+              >
+              的了解和应用。
             </li>
-            <li>熟悉 <strong>uniapp</strong> 的使用，有移动端开发经验</li>
             <li>
-              熟悉 <strong>echarts</strong>、<strong>antd S2</strong>、<strong
+              *
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >Vue全家桶</strong
+              >的应用以及组件化开发思路，通过结合TS，能够封装复用性和健壮性都较强的功能组件。
+            </li>
+
+            <li>
+              * 有
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >Uniapp</strong
+              >
+              、<strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >Nightly</strong
+              >等开发工具的使用经验，参与过完整的移动端APP和微信小程序开发流程。
+            </li>
+            <li>
+              * 熟悉
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >echarts</strong
+              >、<strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >antd S2</strong
+              >、<strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
                 >antd X6</strong
               >
-              等数据展示工具
+              等用于数据分析和数据展示的工具库，独立进行如交叉分析表格、ER关系图展示等组件封装。
             </li>
-            <li>熟悉 <strong>TypeScript</strong> 的使用</li>
-            <li>对 <strong>Three.js</strong> 和三维建模的知识具有一定了解</li>
             <li>
-              对 <strong>bpmn.js</strong>/<strong>logicFlow</strong> 等基于 bpmn
-              协议的流程图工具有一定了解
+              * 简单使用过<strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >Three.js</strong
+              >， 对工具库使用和基础三维建模的知识具有一定了解。
+            </li>
+            <li>
+              * 对基于 bpmn 协议的流程图工具有一定了解，如
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >bpmn.js</strong
+              >/<strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >logicFlow</strong
+              >，独立进行如审批流、业务流的流程设计画板前端部分。
+            </li>
+            <li>
+              * 对AI工作流有一定的了解（如
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >Dify</strong
+              >），对AI在项目中的应用有一些经验。
             </li>
           </ul>
         </div>
       </section>
+      <section class="projects">
+        <h2>项目经历</h2>
+        <h3>企业项目</h3>
+        <ol>
+          <li>
+            <header>
+              <h4>
+                smes机加工综合管理平台
+                <p style="font-size: 12px; font-weight: bold; color: #aaa">
+                  2021-02 ~ 2022-01
+                </p>
+              </h4>
+            </header>
+            <p></p>
+            <p>
+              基于
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >Vue2</strong
+              >
+              开发的机加工管理平台项目，服务于制造企业，具体内容此处略过
+            </p>
+            <p>
+              同时基于
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+              >
+                Vue2
+              </strong>
+              /
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+              >
+                Uniapp
+              </strong>
+              开发了<strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+              >
+                移动端
+              </strong>
+              ， 同时提供多种基于
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+              >
+                ECharts
+              </strong>
+              的数据看板
+            </p>
+            <p>主要开发内容:</p>
+            <ul>
+              <li>
+                1.
+                仪表板：使用Echarts开发的首页看板，早期使用轮询更新数据，后更新为通过websocket实时更新。
+              </li>
+
+              <li>
+                2.
+                工艺路线：使用canvas画布将完整工艺流程图展示并提供基础交互和动效，参与了流程展示和交互效果的设计和开发。
+              </li>
+              <li>
+                3.
+                移动端：使用uniapp开发安卓移动端，参与从立项到发布的全部过程。
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <header>
+              <h4>
+                才匠云平台
+                <p style="font-size: 12px; font-weight: bold; color: #aaa">
+                  2022-04 至 2025-03
+                </p>
+              </h4>
+            </header>
+            <p>
+              基于
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >Vue3</strong
+              >
+              /
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >TypeScript</strong
+              >
+              开发，属公司自研PaaS产品。服务于制造企业，具体内容此处略过
+            </p>
+
+            涉及AI应用，低代码开发平台，移动端，小程序等多个部分
+
+            <p>主要开发内容:</p>
+            <ul>
+              <li>
+                1.
+                低代码开发平台：参与组件配置渲染方法的讨论和实现，参与大多数组件的封装和调整。
+              </li>
+              <li>
+                2.
+                小程序：参与CRM系统小程序从立项、需求方案、开发方案讨论、项目开发到发布的全部流程。
+              </li>
+              <li>
+                3.
+                AI应用：基于Dify，借助deepSeek实现将自然语言转换为SQL并自动转换为图表展示的功能，参与方案讨论和前端部分全部内容的开发。
+              </li>
+              <li>
+                4.
+                元数据：通过对数据库字段描述创建实体并支持在低代码平台中通过引入实体快速构建功能。参与早期讨论和部分前端功能实现。
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
       <section class="openSource">
-        <h2>个人项目</h2>
+        <h3>个人项目</h3>
         <ul>
           <li>
             <header>
-              <h3>摸UI</h3>
+              <h4>
+                画板一张
+                <p style="font-size: 12px; font-weight: bold; color: #aaa">
+                  2023
+                </p>
+              </h4>
               <span>
                 <a
-                  href="https://github.com/XXXXXie1997/Mo-UI-Demo1"
-                  target="_blank"
-                  >源码链接</a
-                >
-                <a
-                  href="http://xietianyu1997.top/mo-ui-document/ "
-                  target="_blank"
-                  >项目预览</a
-                >
-              </span>
-            </header>
-            <p>
-              一款基于 <strong>Vue2</strong> 制作的的 UI
-              框架，主要组件有常用的button、collapse、popover、toast等。并在发布后使用该库为该项目制作在线文档。
-            </p>
-          </li>
-          <li>
-            <header>
-              <h3>画板一张</h3>
-              <span>
-                <a
+                  :style="
+                    mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'
+                  "
                   href="https://github.com/XXXXXie1997/canvasDrawingBoard-vite"
                   target="_blank"
                   >源码链接</a
@@ -343,80 +238,108 @@
               </span>
             </header>
             <p>
-              基于 <strong>Vue3</strong> /
-              <strong>TypeScript</strong>
-              开发的canvas画板，支持绘制擦除、撤销前进等基础功能并能将绘制内容导出。
+              基于
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >Vue3</strong
+              >
+              /
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >TypeScript</strong
+              >
+              开发的canvas画板，支持绘制擦除和通过配置区域修改笔刷参数，以及撤销前进等基础功能、支持画布导出
             </p>
           </li>
           <li>
             <header>
-              <h3>咸鱼记账</h3>
+              <h4>
+                摸UI
+                <p style="font-size: 12px; font-weight: bold; color: #aaa">
+                  2020
+                </p>
+              </h4>
               <span>
                 <a
-                  href="https://github.com/XXXXXie1997/XianYu-1"
+                  :style="
+                    mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'
+                  "
+                  href="https://github.com/XXXXXie1997/Mo-UI-Demo1"
                   target="_blank"
                   >源码链接</a
-                >
-                <a
-                  href="http://xietianyu1997.top/XianYu-1-website/"
-                  target="_blank"
-                  >项目预览</a
                 >
               </span>
             </header>
             <p>
-              一个基于 <strong>Vue2</strong> /
-              <strong>TypeScript</strong>
-              的移动端单页面应用，将记录账单保存至本地。
+              基于
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >Vue2</strong
+              >
+              开发的 UI
+              组件库，从零实现包含button、collapse、popover、toast等基础前端ui组件。
+            </p>
+          </li>
+          <li>
+            <header>
+              <h4>
+                咸鱼记账
+                <p style="font-size: 12px; font-weight: bold; color: #aaa">
+                  2020
+                </p>
+              </h4>
+              <span>
+                <a
+                  :style="
+                    mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'
+                  "
+                  href="https://github.com/XXXXXie1997/XianYu-1"
+                  target="_blank"
+                >
+                  源码链接
+                </a>
+              </span>
+            </header>
+            <p>
+              一个基于
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >Vue2</strong
+              >
+              /
+              <strong
+                :style="mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'"
+                >TypeScript</strong
+              >
+              开发的移动端单页面记账应用，没有后台，账单保存至本地存储。
             </p>
           </li>
 
           <li>
             <header>
-              <h3>咸鱼任意门</h3>
+              <h4>
+                咸鱼任意门
+                <p style="font-size: 12px; font-weight: bold; color: #aaa">
+                  2019
+                </p>
+              </h4>
               <span>
                 <a
+                  :style="
+                    mainTheme === 'bright' ? 'color:royalblue' : 'color:#f80'
+                  "
                   href="https://github.com/XXXXXie1997/guide-demo"
                   target="_blank"
                   >源码链接</a
                 >
-                <a
-                  href="http://xxxxxie1997.gitee.io/guide-demo/"
-                  target="_blank"
-                  >项目预览</a
-                >
               </span>
             </header>
-            <p>学习过程中制作的一个简单的导航页面，支持增删快捷链接。</p>
+            <p>
+              早期学习过程中制作的一个简单的导航页面，使用基本的HTML/CSS/JS，支持增删快捷链接，并保存记录至本地存储。
+            </p>
           </li>
         </ul>
-      </section>
-
-      <section class="others">
-        <h2>其他链接</h2>
-        <ul>
-          <li>
-            <a href="https://juejin.cn/user/958429872790680" target="_blank"
-              >我的博客</a
-            >，作为学习过程的记录。
-          </li>
-          <li>
-            <a href="https://github.com/XXXXXie1997" target="_blank"
-              >我的 GitHub</a
-            >。
-          </li>
-        </ul>
-      </section>
-
-      <section class="education">
-        <h2>教育经历</h2>
-        <p>
-          <span><time>2015年</time>~<time>2019年</time></span>
-          天津农学院 动物科学与动物医学学院 本科
-        </p>
       </section>
     </article>
-    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.0.1/echarts.min.js"></script>
-    <script src="main.js"></script>
   </body>
 </html>

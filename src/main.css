@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  line-height: 1.8em;
+}
+
+body {
+  background: #eee;
+  margin: 20px 0;
+}
+header > h4 {
+  font-weight: bold;
+}
+article {
+  width: 21cm;
+  min-height: 29.7cm;
+  background: white;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 1em;
+}
+body {
+}
+
+p {
+  margin: 0.3em 0;
+}
+
+h1 {
+  font-size: 25px;
+  margin-top: 0;
+}
+
+h4,
+h5,
+h6 {
+  margin: 0 0 4px;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 4px;
+}
+
+strong {
+  font-weight: normal;
+  color: royalblue;
+}
+
+a {
+  color: #999;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+p,
+li {
+  color: #333;
+}
+
+strong {
+  font-weight: normal;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0 0 4px;
+}
+
+.bio {
+  position: relative;
+}
+
+.bio img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.projects p {
+  color: #666;
+}
+
+.projects > ol {
+  margin-top: 0;
+  list-style-position: inside;
+  padding: 0;
+}
+
+.projects > ol > li {
+  margin-bottom: 24px;
+}
+
+.projects > ol > li > header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projects > ol > li h3 {
+  display: inline-block;
+}
+
+.openSource header img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.openSource > ul {
+}
+
+.openSource > ul > li {
+  margin-bottom: 24px;
+}
+
+.openSource header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.openSource h3 {
+}
+@media (max-width: 500px) {
+  body {
+    margin: 0;
+  }
+
+  article {
+    width: auto;
+    height: auto;
+  }
+
+  .bio img {
+    display: none;
+  }
+
+  .skills .wrapper {
+    flex-direction: column;
+  }
+
+  #skills {
+    width: auto;
+  }
+  .jobs header {
+    flex-direction: column;
+  }
+  .jobs header > h3,
+  .jobs header > h4,
+  .jobs header > span {
+    margin: 0;
+  }
+}
+
+@media print {
+  a {
+    display: none;
+  }
+}
